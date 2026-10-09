@@ -1,12 +1,12 @@
-cff-version: 1.0.0
+cff-version: 2.0.0
 message: "If you reference or cite the documentation and architectural specifications of this project, please cite it using the metadata below."
-title: "Legendary Volume Game — Documentation & Governance Specification"
+title: "Legendary Volume Game v2.0 — Documentation & Governance Specification"
 abstract: "Official public documentation, security policy, and legal framework for the Legendary Volume Game project."
 authors:
   - family-names: "Weerasinghe"
     given-names: "W Lithira Thulnith"
     alias: "LTW"
-version: "1.0.0"
+version: "2.0.0"
 date-released: "2026-10-08"
 license: "Proprietary"
 repository-code: "https://github.com/wltweerasinghe/volumegame.git"

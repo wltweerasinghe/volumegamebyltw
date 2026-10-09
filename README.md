@@ -1,6 +1,6 @@
-# Legendary Volume Game — Official Documentation & Repository Governance
+# Legendary Volume Game v2.0 — Official Documentation & Governance
 
-Welcome to the public documentation and repository governance directory for **Legendary Volume Game by LTW**.
+Welcome to the public documentation and repository governance directory for **Legendary Volume Game by LTW v2.0**.
 
 > **IMPORTANT NOTICE REGARDING SOURCE CODE:**  
 > This public repository contains **strictly documentation, legal frameworks, and configuration metadata**. The underlying production application source code, execution binaries, and proprietary implementation scripts are maintained in a separate private repository and are **NOT** published, hosted, or accessible within this public project.
@@ -9,16 +9,17 @@ Welcome to the public documentation and repository governance directory for **Le
 
 ## Executive Summary
 
-**Legendary Volume Game** is an interactive, browser-based 3D educational laboratory engineered to demonstrate spatial geometry, 3D volume calculations, and real-time canvas rendering for STEM learners. Built using Three.js and HTML5 Canvas technologies, the application renders interactive geometric solids—including Cuboids, Cubes, Cylinders, Cones, and Spheres—alongside dynamic mathematical formulas, realtime input evaluation, and an integrated scratchpad for step-by-step problem solving.
+**Legendary Volume Game by LTW v2.0** is an interactive, browser-based educational mathematics laboratory designed for students (specifically demonstrated at President's College, Kotte) to practice 3D volume calculations. Built using HTML5, CSS3, and native JavaScript with a dynamic Canvas confetti system and Web Audio API synthesis, the application renders interactive geometric solids—including Cubes, Cuboids, Cylinders, Prisms, Cones, Spheres, and Pyramids[cite: 1]. Features include a 30-second Countdown Timer, integrated Hint system, LocalStorage Leaderboard tracking, real-time attempt logging, and dynamic feedback visuals[cite: 1].
 
 ---
 
-## Architectural & Security Highlights
+## Architectural & Technical Highlights
 
-- **Real-Time WebGL Rendering:** Leverages standard Three.js libraries to render high-performance, hardware-accelerated 3D geometric models directly in the browser.
-- **Client-Side Verification Engine:** Calculates exact mathematical volumes and precision tolerance checks locally in JavaScript without requesting external server validation.
-- **Interactive Scratchpad Canvas:** Integrates a zero-latency, 2D HTML5 canvas drafting area allowing users to perform intermediate computations directly on-screen.
-- **Strict Source-Available Licensing:** Protected by custom legal conditions that strictly limit repository permissions to read-only inspection and educational evaluation.
+- **Dynamic Visual Geometry Representation:** Utilizes CSS visual styling and dynamic HTML canvas renderings to present tailored geometry graphics for each solid type[cite: 1].
+- **Client-Side Math & Precision Engine:** Handles local evaluation of mathematical volumes (using standard values such as $\pi = \frac{22}{7}$ or $3.14$) with integer rounding checks without backend latency[cite: 1].
+- **Web Audio Sound Synthesis:** Employs the native Browser Web Audio API (`AudioContext`) to synthesize custom sound effects for correct and incorrect answer submissions on the fly[cite: 1].
+- **Backend Analytics & Remote Logging:** Integrates with Google Apps Script web endpoints to track individual student attempts, accuracy, and overall round scores asynchronously[cite: 1].
+- **Offline & Progressive Capabilities:** Embedded Service Worker implementation allowing instant caching and offline capability during active browser sessions[cite: 1].
 
 ---
 
@@ -42,7 +43,7 @@ This public repository contains only governance and metadata assets structured a
 ├── README.md                      # Primary project overview and governance document
 ├── SECURITY.md                    # Vulnerability reporting protocols and security posture
 ├── SUPPORT.md                     # Official support channels and inquiry procedures
-└── VERSION                        # Current major version tag
+└── VERSION                        # Current major version tag (v2.0)
 ```
 
 ---
@@ -65,4 +66,4 @@ For inquiries regarding commercial licensing, enterprise deployment permissions,
 
 **Copyright (c) 2026 W Lithira Thulnith Weerasinghe / LTW. All Rights Reserved.**
 
-W Lithira Thulnith Weerasinghe™ and LTW™ are trademarks of W Lithira Thulnith Weerasinghe.
+W Lithira Thulnith Weerasinghe™, W L T Weerasinghe™ and LTW™ are trademarks of W Lithira Thulnith Weerasinghe.

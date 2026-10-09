@@ -1,6 +1,6 @@
 # Support & Inquiry Portal
 
-Welcome to the official support reference for **Legendary Volume Game by LTW**.
+Welcome to the official support reference for **Legendary Volume Game by LTW v2.0**.
 
 ---
 
