@@ -1,6 +1,6 @@
 # Repository Contribution Guidelines
 
-Thank you for visiting the official repository directory for **Legendary Volume Game by LTW v2.0**.
+Thank you for visiting the official repository directory for **Legendary Volume Game by LTW v3.0**.
 
 ---
 

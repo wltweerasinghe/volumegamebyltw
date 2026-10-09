@@ -2,7 +2,7 @@
 
 ## 1. Security Architecture & Scope Overview
 
-The **Legendary Volume Game by LTW v2.0** is engineered around strict zero-trust and client-side execution principles. While the actual application source code is **not published in this repository**, the application architecture relies exclusively on browser-native Three.js WebGL rendering, 2D HTML5 canvas primitives, and local JavaScript evaluation engines to eliminate network exposure and remote server vulnerabilities.
+The **Legendary Volume Game by LTW v3.0** is engineered around strict zero-trust and client-side execution principles. While the actual application source code is **not published in this repository**, the application architecture relies exclusively on browser-native Three.js WebGL rendering, 2D HTML5 canvas primitives, and local JavaScript evaluation engines to eliminate network exposure and remote server vulnerabilities.
 
 This repository hosts official governance documents, technical specifications, and security policies.
 
@@ -14,7 +14,7 @@ The table below outlines the support status for project specifications and docum
 
 | Version / Component | Status      | Supported          | Notes                                                    |
 | :------------------ | :---------- | :----------------- | :------------------------------------------------------- |
-| **v2.0.0 (Docs)**   | Current     | :white_check_mark: | Active documentation and security policy release         |
+| **v3.0.0 (Docs)**   | Current     | :white_check_mark: | Active documentation and security policy release         |
 | **Source Code**     | Private     | N/A                | Excluded from public git repository                      |
 
 ---

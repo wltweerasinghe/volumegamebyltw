@@ -6,15 +6,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ---
 
-## [2.0.0] - 2026-10-09
+## [3.0.0] - 2026-03-30
 
-### Added
-- Created formal version tracking asset (`VERSION`) initializing major release tag v2.0.
 - UI improvements and bug fixes to the code
 
 ---
 
-## [1.0.0] - 2026-10-08
+## [2.0.0] - 2025-10-05
+
+- UI improvements and bug fixes to the code
+
+### Added
+- Created formal version tracking asset (`VERSION`) initializing major release tag v2.0.
+
+---
+
+## [1.0.0] - 2026-08-08
 
 ### Added
 - Initial public release of official project documentation and repository governance frameworks.

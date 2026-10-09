@@ -2,7 +2,7 @@
 
 ## 1. Purpose & Core Philosophy
 
-This public repository serves as an official documentation and metadata portal for the **Legendary Volume Game by LTW v2.0** project. We are dedicated to providing a respectful, professional, and safe environment for all community members, security auditors, developers, and visitors who interact with this repository.
+This public repository serves as an official documentation and metadata portal for the **Legendary Volume Game by LTW v3.0** project. We are dedicated to providing a respectful, professional, and safe environment for all community members, security auditors, developers, and visitors who interact with this repository.
 
 Regardless of background, identity, level of experience, or technical expertise, every participant is expected to adhere to high standards of professional courtesy and constructive communication.
 
