@@ -1,0 +1,5 @@
+VERSION.md linguist-language=JavaScript
+VERSION.md -linguist-documentation
+
+SUPPORT.md linguist-language=CSS
+SUPPORT.md -linguist-documentation

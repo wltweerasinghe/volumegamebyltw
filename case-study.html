@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legendary Volume Game by LTW V3.0 — Official Documentation</title>
+    <style>
+        :root {
+            --bg-main: #020617;
+            --bg-card: rgba(15, 23, 42, 0.6);
+            --bg-card-solid: #0f172a;
+            --border-color: #1e293b;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --text-heading: #f8fafc;
+            --accent-cyan: #22d3ee;
+            --accent-emerald: #34d399;
+            --accent-amber: #fbbf24;
+            --accent-rose: #f43f5e;
+            --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            --font-mono: 'Fira Code', Consolas, Monaco, 'Courier New', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        pre,
+        code {
+            font-family: var(--font-mono);
+        }
+
+        /* Navigation Bar */
+        .header-bar {
+            border-bottom: 1px solid var(--border-color);
+            background-color: rgba(15, 23, 42, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(8px);
+        }
+
+        .header-container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .brand-badge {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 0.5rem;
+            background-color: rgba(34, 211, 238, 0.1);
+            border: 1px solid rgba(34, 211, 238, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-cyan);
+            font-weight: 700;
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+        }
+
+        .brand-title {
+            font-weight: 600;
+            color: #f1f5f9;
+            font-size: 1.125rem;
+            letter-spacing: -0.025em;
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            border-radius: 9999px;
+            background-color: rgba(52, 211, 153, 0.1);
+            padding: 0.25rem 0.625rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--accent-emerald);
+            border: 1px solid rgba(52, 211, 153, 0.2);
+        }
+
+        .status-dot {
+            height: 0.375rem;
+            width: 0.375rem;
+            border-radius: 9999px;
+            background-color: var(--accent-emerald);
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 896px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        /* Hero Header */
+        .hero-section {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 2rem;
+        }
+
+        .hero-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            letter-spacing: -0.025em;
+            margin-bottom: 1rem;
+            line-height: 1.25;
+        }
+
+        .hero-description {
+            color: var(--text-muted);
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+        }
+
+        /* Callout Box */
+        .callout-box {
+            border-radius: 0.75rem;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            background-color: rgba(251, 191, 36, 0.1);
+            padding: 1.25rem;
+            color: rgba(254, 243, 199, 0.9);
+        }
+
+        .callout-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .callout-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: var(--accent-amber);
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        .callout-header {
+            font-weight: 600;
+            color: #fde68a;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.75rem;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .callout-text {
+            font-size: 0.875rem;
+            line-height: 1.5;
+            color: rgba(253, 230, 138, 0.8);
+        }
+
+        /* Sections */
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #f1f5f9;
+            letter-spacing: -0.025em;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cyan-hash {
+            color: var(--accent-cyan);
+        }
+
+        .section-text {
+            color: #cbd5e1;
+            line-height: 1.625;
+            font-size: 1rem;
+        }
+
+        /* Highlights Grid */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            padding: 1.25rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-card);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .card-header {
+            font-weight: 600;
+            color: var(--accent-cyan);
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .card-body {
+            color: #cbd5e1;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        .inline-code {
+            background-color: #1e293b;
+            padding: 0.125rem 0.375rem;
+            border-radius: 0.25rem;
+            color: #67e8f9;
+            font-size: 0.75rem;
+        }
+
+        /* Architecture Pre Block */
+        .tree-block {
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-card-solid);
+            padding: 1rem;
+            overflow-x: auto;
+        }
+
+        .tree-content {
+            font-size: 0.875rem;
+            color: #cbd5e1;
+            line-height: 1.625;
+            white-space: pre;
+        }
+
+        .tree-comment {
+            color: #64748b;
+        }
+
+        /* Tag Badges */
+        .badge {
+            padding: 0.125rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        .badge-permitted {
+            background-color: rgba(52, 211, 153, 0.1);
+            color: var(--accent-emerald);
+            border: 1px solid rgba(52, 211, 153, 0.2);
+        }
+
+        .badge-prohibited {
+            background-color: rgba(244, 63, 94, 0.1);
+            color: var(--accent-rose);
+            border: 1px solid rgba(244, 63, 94, 0.2);
+        }
+
+        .rights-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            color: #cbd5e1;
+            margin-bottom: 0.75rem;
+        }
+
+        .link-cyan {
+            color: var(--accent-cyan);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .link-cyan:hover {
+            color: #67e8f9;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 0;
+        }
+
+        /* Footer */
+        .footer-section {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .copyright-text {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .trademark-text {
+            color: #64748b;
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Navigation Bar -->
+    <header class="header-bar">
+        <div class="header-container">
+            <div class="brand-wrapper">
+                <div class="brand-badge">LTW</div>
+                <span class="brand-title">Legendary Volume Game by LTW V3.0</span>
+            </div>
+            <span class="status-pill">
+                <span class="status-dot"></span>
+                Official Documentation
+            </span>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-container">
+
+        <!-- Hero / Title Section -->
+        <div class="hero-section">
+            <h1 class="hero-title">
+                Legendary Volume Game by LTW V3.0 — Official Documentation & Governance
+            </h1>
+            <p class="hero-description">
+                Welcome to the documentation hub for <strong style="color: #e2e8f0;">Legendary Volume Game by LTW
+                    V3.0</strong>. I engineered this
+                browser-based mathematics game to practice 3D volume calculations while delivering a seamless,
+                high-performance learning experience.
+            </p>
+        </div>
+
+        <!-- Callout Banner -->
+        <div class="callout-box">
+            <div class="callout-content">
+                <svg class="callout-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <div>
+                    <strong class="callout-header">Important Notice Regarding Source Code</strong>
+                    <p class="callout-text">
+                        This public repository contains <strong>strictly documentation, legal frameworks, and
+                            configuration metadata</strong>. The underlying production application source code,
+                        execution binaries, and proprietary implementation scripts are maintained in a separate private
+                        repository and are <strong>NOT</strong> published, hosted, or accessible within this public
+                        project.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Executive Summary & Context -->
+        <section>
+            <h2 class="section-title">
+                <span class="cyan-hash">#</span> Executive Summary & Background
+            </h2>
+            <p class="section-text" style="margin-bottom: 1rem;">
+                I built this interactive, browser-based educational mathematics game specifically for the
+                <strong>Mathematics Day of President's College, Kotte</strong> .
+                Because I wanted absolute reliability and zero latency for students calculating 3D volumes, I structured
+                it using native HTML5, CSS3, and JavaScript featuring a dynamic Canvas confetti engine and Web Audio API
+                synthesis.
+            </p>
+            <p class="section-text" style="margin-bottom: 1.5rem;">
+                Special credits go to:
+            </p>
+            <ul
+                style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.7; padding-left: 1.25rem; margin-bottom: 1.5rem;">
+                <li><strong style="color: #f8fafc;">Mrs. Madam H. Bhagya S. Rupasinghe</strong> — Principal, President's
+                    College, Kotte</li>
+                <li><strong style="color: #f8fafc;">Mrs. U. H. Apsara N. Premarathna</strong> — Head of Mathematics</li>
+                <li><strong style="color: #f8fafc;">Mrs. Sumedha Weerasinghe</strong> — Teacher-in-charge for Secondary
+                    & Ordinary Level (O/L) ICT English medium</li>
+            </ul>
+
+            <p class="section-text">For more details about the credits, please refer to the <a
+                    href="ACKNOWLEDGEMENTS.md" class="link-cyan">ACKNOWLEDGEMENTS</a> file.
+            </p> <br />
+            <p class="section-text">
+                The project has also been proudly commended by the <strong style="color: #f8fafc;">Media & Broadcasting
+                    Unit of President's College, Kotte</strong> (<a href="https://www.facebook.com/share/p/1CA98jhWmH/"
+                    class="link-cyan" target="_blank">Facebook</a> |
+                <a href="https://www.instagram.com/p/DV3RRovE94Y/" class="link-cyan" target="_blank">Instagram</a>).
+            </p>
+        </section>
+
+        <hr />
+
+        <!-- Section: Architectural & Technical Highlights -->
+        <section>
+            <h2 class="section-title">
+                <span class="cyan-hash">#</span> Architectural & Technical Highlights
+            </h2>
+            <div class="grid-2col">
+                <div class="card">
+                    <h3 class="card-header">Dynamic Visual Geometry</h3>
+                    <p class="card-body">
+                        Utilizes tailored CSS shape mechanics and dynamic HTML canvas renderings to present 3D solids
+                        (Cubes, Cylinders, Spheres, Cones, Pyramids) with precision.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="card-header">Client-Side Math Engine</h3>
+                    <p class="card-body">
+                        Evaluates 3D geometric volumes locally using exact fractional formulas and integer rounding
+                        checks without backend latency or network dependency.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="card-header">Web Audio Sound Synthesis</h3>
+                    <p class="card-body">
+                        Employs the native Browser Web Audio API (<code class="inline-code">AudioContext</code>) to
+                        generate custom synthesized tones for correct and incorrect answers on the fly.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="card-header">Backend Analytics & Logging</h3>
+                    <p class="card-body">
+                        Asynchronously posts student attempts, dimension variables, and score results directly to a
+                        Google Apps Script spreadsheet endpoint.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="card-header">Client Integrity & Anti-Tamper</h3>
+                    <p class="card-body">
+                        Features active keyboard shortcut blocking (<code class="inline-code">Ctrl+U</code>, <code
+                            class="inline-code">Ctrl+S</code>, <code class="inline-code">F12</code>), context menu
+                        prevention, and runtime DevTools detection.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="card-header">Offline Service Worker</h3>
+                    <p class="card-body">
+                        Embedded Service Worker implementation enabling instant caching and offline execution during
+                        active classroom browser sessions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr />
+
+        <!-- Section: Public Repository Architecture -->
+        <section>
+            <h2 class="section-title">
+                <span class="cyan-hash">#</span> Public Repository Architecture
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1rem;">
+                This public repository contains only governance and metadata assets structured as follows:
+            </p>
+            <div class="tree-block">
+                <pre class="tree-content">.
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   └── bug_report.md          <span class="tree-comment"># Structured template for reporting documentation issues</span>
+│   └── PULL_REQUEST_TEMPLATE.md   <span class="tree-comment"># Guidelines for documentation contribution review</span>
+├── .editorconfig                  <span class="tree-comment"># Code style and formatting standards across editors</span>
+├── .gitignore                     <span class="tree-comment"># Repository file exclusion parameters</span>
+├── CHANGELOG.md                   <span class="tree-comment"># Comprehensive release notes and documentation history</span>
+├── CITATION.cff                   <span class="tree-comment"># Machine-readable academic and professional citation format</span>
+├── CODE_OF_CONDUCT.md             <span class="tree-comment"># Public engagement and community interaction guidelines</span>
+├── CONTRIBUTING.md                <span class="tree-comment"># Policies regarding contributions and repository limits</span>
+├── LICENSE                        <span class="tree-comment"># Strict Source-Available & Proprietary License</span>
+├── README.md                      <span class="tree-comment"># Primary project overview and governance document</span>
+├── SECURITY.md                    <span class="tree-comment"># Vulnerability reporting protocols and security posture</span>
+├── SUPPORT.md                     <span class="tree-comment"># Official support channels and inquiry procedures</span>
+└── VERSION                        <span class="tree-comment"># Current major version tag (v3.0)</span></pre>
+            </div>
+        </section>
+
+        <hr />
+
+        <!-- Section: Rights & Licensing Summary -->
+        <section>
+            <h2 class="section-title">
+                <span class="cyan-hash">#</span> Rights & Licensing Summary
+            </h2>
+            <p class="section-text" style="margin-bottom: 1.5rem;">
+                All files published within this repository are governed by the Strict Source-Available & Proprietary
+                License.
+            </p>
+
+            <div style="margin-bottom: 1.5rem;">
+                <div class="rights-item">
+                    <span class="badge badge-permitted">Permitted</span>
+                    <span>Viewing and inspecting documentation in a browser for educational, technical review, or
+                        portfolio assessment purposes.</span>
+                </div>
+                <div class="rights-item">
+                    <span class="badge badge-prohibited">Prohibited</span>
+                    <span>Any copying, redistribution, public mirroring, commercial monetization, reverse engineering,
+                        or utilization for artificial intelligence / machine learning training.</span>
+                </div>
+            </div>
+
+            <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1.5rem;">
+                For comprehensive details, please refer to the complete <a href="LICENSE.md"
+                    class="link-cyan">LICENSE</a> file.
+            </p>
+
+            <div class="card" style="background-color: rgba(15, 23, 42, 0.4); padding: 1.25rem;">
+                <h3 style="font-weight: 600; color: #f1f5f9; font-size: 1rem; margin-bottom: 0.5rem;">Contact &
+                    Enterprise Enquiries</h3>
+                <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.5;">
+                    For inquiries regarding commercial licensing, enterprise deployment permissions, or direct code
+                    audits, please reach out directly to
+                    <a href="mailto:legal@wltweerasinghe.com" class="link-cyan">W L T Weerasinghe</a>.
+                </p>
+            </div>
+        </section>
+
+        <hr />
+
+        <!-- Section: Copyright Notice -->
+        <footer class="footer-section">
+            <h2 style="font-size: 1.25rem; font-weight: 600; color: #f1f5f9; letter-spacing: -0.025em;">Copyright Notice
+            </h2>
+            <p class="copyright-text">
+                <strong>Copyright (c) 2026 W Lithira Thulnith Weerasinghe / LTW. All Rights Reserved.</strong>
+            </p>
+            <p class="trademark-text">
+                W Lithira Thulnith Weerasinghe™, W L T Weerasinghe™, and LTW™ are trademarks of W Lithira Thulnith
+                Weerasinghe.
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

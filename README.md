@@ -9,7 +9,7 @@ Welcome to the public documentation and repository governance directory for **Le
 
 ## Executive Summary
 
-**Legendary Volume Game by LTW v3.0** is an interactive, browser-based educational mathematics laboratory designed for students (specifically demonstrated at President's College, Kotte) to practice 3D volume calculations. Built using HTML5, CSS3, and native JavaScript with a dynamic Canvas confetti engine and Web Audio API synthesis, the application renders interactive geometric solids—including Cubes, Cuboids, Cylinders, Prisms, Cones, Spheres, and Pyramids. Features include a 30-second Countdown Timer per question, an integrated Hint system (2 hints per attempt), LocalStorage Leaderboard tracking, real-time attempt logging via Google Apps Script web endpoints, dynamic feedback visuals, and integrated anti-tamper protection overlays.
+**Legendary Volume Game by LTW v3.0** is an interactive, browser-based educational mathematics game designed for students (specifically demonstrated at President's College, Kotte) to practice 3D volume calculations. Built using HTML5, CSS3, and native JavaScript with a dynamic Canvas confetti engine and Web Audio API synthesis, the application renders interactive geometric solids—including Cubes, Cuboids, Cylinders, Prisms, Cones, Spheres, and Pyramids. Features include a 30-second Countdown Timer per question, an integrated Hint system (2 hints per attempt), LocalStorage Leaderboard tracking, real-time attempt logging via Google Apps Script web endpoints, dynamic feedback visuals, and integrated anti-tamper protection overlays.
 
 ---
 
@@ -59,7 +59,7 @@ All files published within this repository are governed by the Strict Source-Ava
 For comprehensive details, please refer to the complete [LICENSE](LICENSE.md) file.
 
 **Contact & Enterprise Enquiries**  
-For inquiries regarding commercial licensing, enterprise deployment permissions, or direct code audits, please reach out directly to **W L T Weerasinghe** at [wltweerasinghe@gmail.com](mailto:wltweerasinghe@gmail.com) or via phone at **+94 76 021 0025**.
+For inquiries regarding commercial licensing, enterprise deployment permissions, or direct code audits, please reach out directly to **W L T Weerasinghe** at [legal@wltweerasinghe.com](mailto:legal@wltweerasinghe.com).
 
 ---
 

@@ -1,0 +1,7 @@
+# LTW Website Metadata Configuration
+title: Legendary Volume Game by LTW V3.0
+category: Web Application
+description: Legendary Volume Game by LTW v3.0 is an interactive, browser-based educational mathematics game designed for students to practice 3D volume calculations.
+live_url: https://volumegame.wltweerasinghe.com
+github_url: https://github.com/wltweerasinghe/volumegamebyltw.git
+sort_order: 2

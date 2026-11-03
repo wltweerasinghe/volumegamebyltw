@@ -25,7 +25,7 @@ Security, mathematical integrity, and rendering safety are top priorities for th
 
 ### Reporting Procedure
 1. **Do NOT Create Public Issues:** Do **NOT** open public GitHub issues or discussions regarding security vulnerabilities or technical exploits.
-2. **Private Disclosure Channel:** Submit your findings privately via GitHub Security Advisories (if enabled) or directly through official, verified contact to [W L T Weerasinghe](mailto:wltweerasinghe@gmail.com).
+2. **Private Disclosure Channel:** Submit your findings privately via GitHub Security Advisories (if enabled) or directly through official, verified contact to [W L T Weerasinghe](mailto:ltw@wltweerasinghe.com).
 3. **Information to Include:**
    * Detailed description of the suspected flaw or edge case.
    * Specific document or specification reference.
